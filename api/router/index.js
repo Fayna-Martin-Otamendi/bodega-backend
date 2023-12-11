@@ -14,7 +14,7 @@ router
     .use('/user', userRouter)
     .use('/bodegas', bodegasRouter)
     .use('/calificaciones', calificacionesRouter)
-    .use('/detalles_pedido', detalles_pedidoRouter)
+   .use('/detalles_pedido', detalles_pedidoRouter)
     .use('/pedidos', pedidosRouter)
     .use('/reservas', reservasRouter)
     .use('/tour', tourRouter)

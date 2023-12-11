@@ -20,3 +20,5 @@ router
     .post('/', checkAuth, checkOwner, checkAdmin, createWine)
     .put('/:vinosId', checkAuth, checkOwner, checkAdmin, modifyWine)
     .delete('/:vinosId', checkAuth, checkOwner, checkAdmin, deleteWine)
+
+    module.exports = router

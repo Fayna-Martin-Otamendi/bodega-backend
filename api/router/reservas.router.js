@@ -20,3 +20,5 @@ router
     .post('/', checkAuth, createReservation)
     .put('/:reservasId', checkAuth, modifyReservation)
     .delete('/:reservasId', checkAuth, deleteReservation)
+
+    module.exports = router

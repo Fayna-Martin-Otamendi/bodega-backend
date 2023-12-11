@@ -15,3 +15,5 @@ router
     .post('/:id_vino/calificaciones', checkAuth, createQualification)
     .put('/:id_vino/calificaciones', checkAuth, modifyQualification)
     .delete('/:id_vino/calificaciones', checkAuth, deleteQualification)
+
+    module.exports = router

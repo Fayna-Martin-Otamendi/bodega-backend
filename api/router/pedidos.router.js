@@ -18,3 +18,5 @@ router
     .post('/', checkAuth, createOrder)
     .put('/:pedidosId', checkAuth, checkAdmin, modifyOrder)
     .delete('/:pedidosId', checkAuth, checkAdmin, deleteOrder)
+
+    module.exports = router

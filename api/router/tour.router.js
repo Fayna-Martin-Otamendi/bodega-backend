@@ -22,3 +22,5 @@ router
     .post('/', checkAuth, checkOwner, checkAdmin, createTour)
     .put('/:tourId', checkAuth, checkOwner, checkAdmin, modifyTour)
     .delete('/:tourId', checkAuth, checkOwner, checkAdmin, deleteTour)
+
+    module.exports = router
