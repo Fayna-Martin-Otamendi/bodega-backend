@@ -1,11 +1,11 @@
-const Bodega = require('./bodegas.model')
-const Calificacion= require('./calificaciones.model')
-const Detalle_pedido = require('./detalles_pedido.model')
-const Pedido = require('./pedidos.model')
-const Reserva = require('./reservas.model')
-const Tour = require('./tour.model')
-const User= require('./user.model')
-const Vino = require('./vinos.model')
+const Bodega = require('../api/models/bodegas.model')
+const Calificacion= require('../api/models/calificaciones.model')
+const Detalle_pedido = require('../api/models/detalles_pedidos.model')
+const Pedido = require('../api/models/pedidos.model')
+const Reserva = require('../api/models/reservas.model')
+const Tour = require('../api/models/tour.model')
+const Usuario= require('../api/models/user.model')
+const Vino = require('../api/models/vinos.model')
 
 function addRelations() {
   try {
