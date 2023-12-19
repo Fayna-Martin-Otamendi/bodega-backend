@@ -27,7 +27,7 @@ const User = connection.define('user', {
       require: true
     },
     number_phone: {
-       type: DataTypes.STRING,
+       type: DataTypes.INTEGER,
     }, 
   },{
     timestamps: false
