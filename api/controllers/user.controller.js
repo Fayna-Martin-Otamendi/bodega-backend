@@ -1,4 +1,6 @@
 const User = require('../models/user.model')
+const Reservas = require('../models/reservas.model')
+const Pedidos = require('../models/pedidos.model')
 
 const bcrypt = require('bcrypt')
 
@@ -77,7 +79,11 @@ const getAllUsers = async (req, res) => {
         where: {
           id: res.locals.user.id
         },
-        attributes: ['id','user_name','email']
+        attributes: ['id','user_name','email'],
+        include: [
+          {model: Pedidos},
+          {model: Reservas}
+        ]
       })
       if (user) {
         const message = 'Hi ${user.user_name}!, this is your profile'
