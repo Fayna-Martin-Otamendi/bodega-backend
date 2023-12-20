@@ -2,13 +2,8 @@ const { Sequelize } = require('sequelize')
 
 require('dotenv').config();
 
-const connection = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-  host: process.env.DB_HOST,
-  dialect: process.env.DB_DIALECT,
-  port: process.env.DB_PORT,
- 
-  logging: false
-})
+console.log(process.env.MYSQLUSER, process.env.MYSQLPASSWORD, process.env.MYSQLHOST, process.env.MYSQLPORT, process.env.MYSQLDATABASE)
+const connection = new Sequelize(`mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`)
 
 const checkConnection = async () => {
     try {
