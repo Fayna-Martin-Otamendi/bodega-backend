@@ -1,4 +1,5 @@
 require('dotenv').config()
+const cors = require('cors') 
 
 const express = require('express')
 const morgan = require('morgan')
@@ -9,6 +10,7 @@ const addRelations = require('./database/relations.js')
 
 function startExpress () {
   const app = express()
+  .use(cors())
   .use(morgan('dev'))
   .use(express.json())
 
