@@ -18,6 +18,7 @@ async function getAllOrders(req, res) {
 
 async function createOrder(req, res) {
     try {
+        req.body.userId = res.locals.user.id
         const order = await Pedido.create({
         })
         return res.status(200).json({message: 'Order created', order})
@@ -39,8 +40,8 @@ async function modifyOrder(req,res) {
             return res.status(404).send('Order not found')
         }
     } catch (error) {
-        return res.status(500).send(error)
         console.log("El error está en la función modifyOrder")
+        return res.status(500).send(error)
     }
 }
 
@@ -58,10 +59,10 @@ async function modifyOrder(req,res) {
             return res.status(404).send('Order not found')
         }
     } catch (error) {
-        return res.status(500).send(error)
         console.log("El error está en la función deleteOrder")
+        return res.status(500).send(error) 
     }
-}
+  }
   
 module.exports = {
     getAllOrders,
