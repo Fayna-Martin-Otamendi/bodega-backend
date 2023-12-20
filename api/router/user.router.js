@@ -19,13 +19,13 @@ const {
 
 router
   .get('/', checkAuth, checkAdmin, getAllUsers)
-  .get('/:userId', checkAuth, checkAdmin, getOneUser)
-  .get('/profile', checkAuth, getOwnProfile)  
   .post('/', checkAuth, checkAdmin, createUser)
-  .put('/:userId', checkAuth, checkAdmin, updateUser)
+  .get('/profile', checkAuth, getOwnProfile)  
   .put('/profile', checkAuth, updateOwnProfile)
-  .delete('/:userId', checkAuth, checkAdmin, deleteUser)
   .delete('/profile', checkAuth, deleteOwnProfile)
+  .get('/:userId', checkAuth, checkAdmin, getOneUser)
+  .put('/:userId', checkAuth, checkAdmin, updateUser)
+  .delete('/:userId', checkAuth, checkAdmin, deleteUser)
   .put('/password', checkAuth, resetPassword)
 
 module.exports = router

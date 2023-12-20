@@ -13,6 +13,7 @@ const signup = async (req, res) => {
             email: req.body.email,
             password: req.body.password,
             number_phone: req.body.number_phone,
+            role: req.body.role
         })
 
         const payload = { email: req.body.email }
