@@ -21,8 +21,8 @@ function addRelations() {
     Reserva.hasMany(Tour)
     Tour.belongsTo(Reserva)
 
-    Pedido.hasMany(Usuario)
-    Usuario.belongsTo(Pedido)
+    Usuario.hasMany(Pedido)
+    Pedido.belongsTo(Usuario)
 
     Detalle_pedido.hasMany(Pedido)
     Pedido.belongsTo(Detalle_pedido)
