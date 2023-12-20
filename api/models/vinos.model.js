@@ -10,17 +10,17 @@ const Vino = connection.define('vino', {
     },
     year: {
       type: DataTypes.DATE,
-      allowNull: false,
+    
       
     },
     tipo: {
       type: DataTypes.STRING,
-      allowNull: false,
+      
       
     }, 
     descripcion: {
         type: DataTypes.STRING,
-        allowNull: false,
+      
        
       }, 
       precio_unidad: {
@@ -30,13 +30,12 @@ const Vino = connection.define('vino', {
       }, 
       stock: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        
         
       }, 
       id_bodega: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        require: true
+        
       },    
   },{
     timestamps: false
