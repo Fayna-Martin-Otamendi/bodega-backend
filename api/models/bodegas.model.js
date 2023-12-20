@@ -11,12 +11,11 @@ const Bodega = connection.define('bodega', {
     adress: {
       type: DataTypes.STRING,
       allowNull: false,
-      require: true,
+     
     },
     id_owner: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      require: true
+      
     },    
   },{
     timestamps: false
