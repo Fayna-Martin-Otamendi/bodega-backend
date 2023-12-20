@@ -15,7 +15,6 @@ const Bodega = connection.define('bodega', {
     },
     id_owner: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       
     },    
   },{
